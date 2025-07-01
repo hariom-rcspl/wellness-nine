@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Nine | Doctors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/images/logo.png" alt="" height="100" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blogs</a>
+                    </li>
+                </ul>
+                <div class="flex gap-2">
+                    <button type="button" class="btn btn-golden">Get a Quote</button>
+                    <button type="button" class="btn btn-golden">Book a Appointment </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- page title banner start -->
+
+    <div class="page-banner">
+        <div class="container">
+            <h1>Find a Doctor</h1>
+            <p>Connect with Trusted Healthcare Experts for Personalized Care</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="container py-4">
+                    <div class="filter-box">
+                        <!-- Specialities -->
+                        <h6 class="mb-4">Filters</h6>
+                        <h6>Specialities</h6>
+                        <div class="search-wrapper mb-3">
+                            <i class="bi bi-search"></i>
+                            <input type="text" class="form-control search-input" placeholder="Search Speciality">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="anaesthesia">
+                            <label class="form-check-label" for="anaesthesia">Anaesthesiology</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="bariatrics">
+                            <label class="form-check-label" for="bariatrics">Bariatrics</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cardiac">
+                            <label class="form-check-label" for="cardiac">Cardiac Sciences</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cosmetology">
+                            <label class="form-check-label" for="cosmetology">Cosmetology & Plastic Surgery</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="critical">
+                            <label class="form-check-label" for="critical">Critical Care & Emergency Medicine</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="dentistry">
+                            <label class="form-check-label" for="dentistry">Dentistry</label>
+                        </div>
+
+                        <!-- Select City -->
+                        <h6 class="mt-4">Select City</h6>
+                        <div class="search-wrapper mb-3">
+                            <i class="bi bi-search"></i>
+                            <input type="text" class="form-control search-input" placeholder="Search Cities">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="city" id="ahmedabad">
+                            <label class="form-check-label" for="ahmedabad">Ahmedabad</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="city" id="aragonda">
+                            <label class="form-check-label" for="aragonda">Aragonda</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="city" id="bangalore">
+                            <label class="form-check-label" for="bangalore">Bangalore</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="city" id="bhopal">
+                            <label class="form-check-label" for="bhopal">Bhopal</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="city" id="bhubaneswar">
+                            <label class="form-check-label" for="bhubaneswar">Bhubaneswar</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="container py-4 row gap-4">
+                    <div class="doctor-card d-flex flex-md-row flex-column align-items-center gap-4">
+
+                        <!-- Image -->
+                        <div class="col-md-3">
+                            <img src="./assets/images/doc-1.webp" alt="Doctor" class="doctor-img">
+                        </div>
+
+                        <!-- Info -->
+                        <div class="col-md-5">
+                            <h5 class="fw-bold">Dr Aadithya Rangarajan</h5>
+                            <p class="text-decoration-none text-blue text-small fw-semibold">5+ Years Experience</p>
+                            <p class="mb-1 text-small mt-2">
+                                MBBS, MS in General Surgery, MCh in Plastic Surgery | Cosmetology & Plastic Surgery
+                            </p>
+                            <p class="text-small text-muted">English | Hindi | Tamil | Kannada | Malayalam</p>
+                            <p class="mb-1 text-small">
+                                <i class="bi bi-geo-alt-fill text-primary me-1"></i>
+                                Apollo Adlux Hospital
+                            </p>
+                            <p class="text-small mb-0">
+                                <span class="icon-circle"><i class="bi bi-telephone-fill"></i></span>
+                                Call
+                            </p>
+                            <p class="text-small"><span class="text-blue fw-bold">10:00 - 16:00 </span> Mon - Sat</p>
+                        </div>
+
+                        <!-- Booking -->
+                        <div class="col-md-4 text-center">
+                            <p class="fw-semibold text-blue mb-1">10:00 - 16:00</p>
+                            <p class="text-small">Mon - Sat</p>
+                            <button class="book-btn mt-2">
+                                BOOK APPOINTMENT <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="doctor-card d-flex flex-md-row flex-column align-items-center gap-4">
+
+                        <!-- Image -->
+                        <div class="col-md-3">
+                            <img src="./assets/images/doc-1.webp" alt="Doctor" class="doctor-img">
+                        </div>
+
+                        <!-- Info -->
+                        <div class="col-md-5">
+                            <h5 class="fw-bold">Dr Aadithya Rangarajan</h5>
+                            <p class="text-decoration-none text-blue text-small fw-semibold">5+ Years Experience</p>
+                            <p class="mb-1 text-small mt-2">
+                                MBBS, MS in General Surgery, MCh in Plastic Surgery | Cosmetology & Plastic Surgery
+                            </p>
+                            <p class="text-small text-muted">English | Hindi | Tamil | Kannada | Malayalam</p>
+                            <p class="mb-1 text-small">
+                                <i class="bi bi-geo-alt-fill text-primary me-1"></i>
+                                Apollo Adlux Hospital
+                            </p>
+                            <p class="text-small mb-0">
+                                <span class="icon-circle"><i class="bi bi-telephone-fill"></i></span>
+                                Call
+                            </p>
+                            <p class="text-small"><span class="text-blue fw-bold">10:00 - 16:00 </span> Mon - Sat</p>
+                        </div>
+
+                        <!-- Booking -->
+                        <div class="col-md-4 text-center">
+                            <p class="fw-semibold text-blue mb-1">10:00 - 16:00</p>
+                            <p class="text-small">Mon - Sat</p>
+                            <button class="book-btn mt-2">
+                                BOOK APPOINTMENT <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="doctor-card d-flex flex-md-row flex-column align-items-center gap-4">
+
+                        <!-- Image -->
+                        <div class="col-md-3">
+                            <img src="./assets/images/doc-1.webp" alt="Doctor" class="doctor-img">
+                        </div>
+
+                        <!-- Info -->
+                        <div class="col-md-5">
+                            <h5 class="fw-bold">Dr Aadithya Rangarajan</h5>
+                            <p class="text-decoration-none text-blue text-small fw-semibold">5+ Years Experience</p>
+                            <p class="mb-1 text-small mt-2">
+                                MBBS, MS in General Surgery, MCh in Plastic Surgery | Cosmetology & Plastic Surgery
+                            </p>
+                            <p class="text-small text-muted">English | Hindi | Tamil | Kannada | Malayalam</p>
+                            <p class="mb-1 text-small">
+                                <i class="bi bi-geo-alt-fill text-primary me-1"></i>
+                                Apollo Adlux Hospital
+                            </p>
+                            <p class="text-small mb-0">
+                                <span class="icon-circle"><i class="bi bi-telephone-fill"></i></span>
+                                Call
+                            </p>
+                            <p class="text-small"><span class="text-blue fw-bold">10:00 - 16:00 </span> Mon - Sat</p>
+                        </div>
+
+                        <!-- Booking -->
+                        <div class="col-md-4 text-center">
+                            <p class="fw-semibold text-blue mb-1">10:00 - 16:00</p>
+                            <p class="text-small">Mon - Sat</p>
+                            <button class="book-btn mt-2">
+                                BOOK APPOINTMENT <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="doctor-card d-flex flex-md-row flex-column align-items-center gap-4">
+
+                        <!-- Image -->
+                        <div class="col-md-3">
+                            <img src="./assets/images/doc-1.webp" alt="Doctor" class="doctor-img">
+                        </div>
+
+                        <!-- Info -->
+                        <div class="col-md-5">
+                            <h5 class="fw-bold">Dr Aadithya Rangarajan</h5>
+                            <p class="text-decoration-none text-blue text-small fw-semibold">5+ Years Experience</p>
+                            <p class="mb-1 text-small mt-2">
+                                MBBS, MS in General Surgery, MCh in Plastic Surgery | Cosmetology & Plastic Surgery
+                            </p>
+                            <p class="text-small text-muted">English | Hindi | Tamil | Kannada | Malayalam</p>
+                            <p class="mb-1 text-small">
+                                <i class="bi bi-geo-alt-fill text-primary me-1"></i>
+                                Apollo Adlux Hospital
+                            </p>
+                            <p class="text-small mb-0">
+                                <span class="icon-circle"><i class="bi bi-telephone-fill"></i></span>
+                                Call
+                            </p>
+                            <p class="text-small"><span class="text-blue fw-bold">10:00 - 16:00 </span> Mon - Sat</p>
+                        </div>
+
+                        <!-- Booking -->
+                        <div class="col-md-4 text-center">
+                            <p class="fw-semibold text-blue mb-1">10:00 - 16:00</p>
+                            <p class="text-small">Mon - Sat</p>
+                            <button class="book-btn mt-2">
+                                BOOK APPOINTMENT <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Navigation</p>
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/treatments">Treatments</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Contact</p>
+                    <ul>
+                        <li><a href="mailto:Support@wellnessnine.com">Support@wellnessnine.com</a></li>
+                        <li><a href="#">WhatsApp Chat</a></li>
+                        <li><a href="tel:+919023519739">Mobile: +91 90235 19739</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Legal</p>
+                    <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of service</a></li>
+                        <li><a href="/hipaa-compliance">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Countries</p>
+                    <ul>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" class="text-white text-decoration-none">Terms & Supports</a>
+                    </div>
+                     <div class="col text-end">
+                        <a href="#" class="text-white text-decoration-none">Designed by RCSL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- page title banner end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness None | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="margin-bottom: -130px; position: relative; z-index: 999;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/logo.png" alt="" height="100" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Blogs</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-golden">Get a Quote</button>
+                    <button type="button" class="btn btn-golden">Book a Appointment </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="bg-video">
+            <video class="local-video" autoplay loop muted playsinline>
+                <source src="./assets/bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="main-overlay"></div>
+        <div class="container relative">
+            <div class="row min-vh-100 align-items-center position-relative z-2">
+                <div>
+                    <h2 class="text-center text-white fs-1">Pain Can’t Wait. Neither Should You.</h2>
+                    <p class="text-center text-white fs-4">Stop waiting months for treatment back home. We help you get
+                        world-class care
+                        in
+                        India —
+                        safely,affordably, and fast.</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-golden btn-lg rounded-pill">Get a Quote</button>
+                        <button class="btn btn-white-outlined btn-lg rounded-pill">Book a Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="row gap-5">
+            <div class="col">
+                <img src="./assets/images/logo.png" alt="General Wellness">
+                <p class="text-center fw-bold">General Wellness</p>
+            </div>
+            <div class="col">
+                <img src="./assets/images/logo.png" alt="Gastrology">
+                <p class="text-center fw-bold">Gastrology</p>
+            </div>
+            <div class="col">
+                <img src="./assets/images/logo.png" alt="Urology">
+                <p class="text-center fw-bold">Urology</p>
+            </div>
+            <div class="col">
+                <img src="./assets/images/logo.png" alt="Cardiology">
+                <p class="text-center fw-bold">Cardiology</p>
+            </div>
+            <div class="col">
+                <img src="./assets/images/logo.png" alt="Oncology">
+                <p class="text-center fw-bold">Oncology</p>
+            </div>
+            <div class="col">
+                <img src="./assets/images/logo.png" alt="Knee Replacement">
+                <p class="text-center fw-bold">Knee Replacement</p>
+            </div>
+            <div class="col">
+                <img class="mx-auto d-block" width="100" height="100" src="https://img.icons8.com/bubbles/100/tooth-cracked.png" alt="tooth-cracked"/>
+                <!-- <img src="./assets/images/logo.png" alt="Dental"> -->
+                <p class="text-center fw-bold">Dental</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="location-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="map" style="height: 500px;"></div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Our Locations</h3>
+                    <p>As of June 2023, India was ranked tenth in the world on the Medical Tourism Index (MTI) with a
+                        score of 69.80. India is a top medical tourism destination and is considered one of the most
+                        cost-efficient and fastest-growing destinations in the world.</p>
+                    <p class="fw-bold">Here are some other details about medical tourism in India:</p>
+                    <p class="fw-bold">Medical services</p>
+                    <p>India offers over 200 medical services, including fertility treatments, skincare, cardiovascular
+                        surgeries, cancer treatment, and organ transplant surgeries.</p>
+                    <p class="fw-bold">Medical tourism growth</p>
+                    <p>The number of medical tourists in India has increased dramatically, with over a tenfold increase
+                        between 2014 and 2019. In 2024, Crisil estimated that 7.3 million medical tourists would visit
+                        India, up from 6.1 million in 2023.</p>
+                    <p class="fw-bold">Medical tourism hubs</p>
+                    <p>South Indian states, including Tamilnadu, Andhra Pradesh, Kerala, Karnataka, and Telangana, are
+                        leading medical tourism hubs in India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" style="background-color: #6e6e6e;">
+        <h3 class="text-center text-white mb-5">Journey to Medical Treatment in India</h3>
+        <img src="./assets/images/journey.png" alt="">
+    </div>
+
+    <div class="testimonial">
+        <div class="container">
+            <h3>Patients Speak</h3>
+            <div class="testimonial-slider testimonial-top my-5">
+                <div class="card">
+                    <h3>Ajai Kumar Srivastava</h3>
+                    <p>I am a 58-year-old mechanical engineer who was suffering from O/A since 2018. I visited Dr.
+                        Manish
+                        Samson for robotic-assisted bilateral TKR Surgery...</p>
+                    <strong>Ajai Kumar Srivastava</strong>
+                </div>
+                <div class="card video-card">
+                    <img src="./assets/images/blog-1.jpg" alt="Video thumbnail" />
+                    <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+                </div>
+                <div class="card">
+                    <h3>Kavita Sharma</h3>
+                    <p>My mother had severe osteoarthritis in both knees, causing her significant pain and difficulty in
+                        performing daily activities...</p>
+                    <strong>Kavita Sharma</strong>
+                </div>
+                <div class="card video-card">
+                    <img src="./assets/images/blog-3.jpg" alt="Video thumbnail" />
+                    <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+                </div>
+            </div>
+
+            <div class="testimonial-slider testimonial-bottom my-5">
+                <div class="card">
+                    <h3>Ajai Kumar Srivastava</h3>
+                    <p>I am a 58-year-old mechanical engineer who was suffering from O/A since 2018. I visited Dr.
+                        Manish
+                        Samson for robotic-assisted bilateral TKR Surgery...</p>
+                    <strong>Ajai Kumar Srivastava</strong>
+                </div>
+                <div class="card video-card">
+                    <img src="./assets/images/blog-1.jpg" alt="Video thumbnail" />
+                    <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+                </div>
+                <div class="card">
+                    <h3>Kavita Sharma</h3>
+                    <p>My mother had severe osteoarthritis in both knees, causing her significant pain and difficulty in
+                        performing daily activities...</p>
+                    <strong>Kavita Sharma</strong>
+                </div>
+                <div class="card video-card">
+                    <img src="./assets/images/blog-3.jpg" alt="Video thumbnail" />
+                    <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-sec">
+        <div class="container">
+            <h3>Frequently Asked Questions</h3>
+            <p>Find answers to common questions about our services, treatments, appointments, and patient care options
+                to help you make informed health decisions.</p>
+
+            <div class="accordion mt-5" id="faqAccordian">
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Why should I consider India for my medical treatment?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            India offers world-class medical care at a fraction of the cost in the US or Canada. Our
+                            hospitals are internationally accredited, and doctors are globally trained. You also benefit
+                            from shorter waiting times and access to specialised procedures.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I start the process with WellnessNine?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Just fill out our online form with your medical needs, then download the WellnessNine app.
+                            From there, you can choose your doctor, book a consultation, and begin your treatment
+                            journey.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What specialities does WellnessNine cover?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            We specialise in:
+                            <ul>
+                                <li>Orthopaedics (including Knee Replacement)</li>
+                                <li>Oncology (Cancer Treatments)</li>
+                                <li>Cardiology (Heart-related conditions)</li>
+                                <li>Dental Procedures</li>
+                                <li>Gastrology</li>
+                                <li>Urology</li>
+                                <li>General Wellness and Preventive Care</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                            Are the doctors qualified and experienced?
+                        </button>
+                    </h2>
+                    <div id="collapse-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Absolutely. All our partnered doctors are board-certified, many with international training
+                            and decades of experience. You can view credentials and reviews in our app before selecting
+                            a doctor.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                            How does the online consultation work?
+                        </button>
+                    </h2>
+                    <div id="collapse-5" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            After downloading the app and choosing a doctor, you select a consultation time and make the
+                            payment. Your consultation will be conducted via secure video call at your scheduled time.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                            What happens after the online consultation?
+                        </button>
+                    </h2>
+                    <div id="collapse-6" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Once your treatment plan is confirmed, we help you with visa guidance, travel planning,
+                            hospital bookings, accommodation, and airport pickups to make your trip to India
+                            hassle-free.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+                            Is India safe for medical travel?
+                        </button>
+                    </h2>
+                    <div id="collapse-7" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Yes, India is a popular destination for medical tourism, boasting excellent healthcare
+                            infrastructure. We partner exclusively with top-tier hospitals in cities such as <strong>
+                                Ahmedabad, Mumbai, and Bengaluru,</strong> which are recognised for their safety and
+                            accessibility.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+                            Will there be someone to help me in India?
+                        </button>
+                    </h2>
+                    <div id="collapse-8" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Yes. We provide on-ground support, including airport pickup, hospital coordination,
+                            translation (if required), and local assistance during your entire stay.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+                            How long will I need to stay in India?
+                        </button>
+                    </h2>
+                    <div id="collapse-9" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            It varies by treatment. For example:
+                            <ul>
+                                <li> <strong>Knee replacement:</strong> 2–3 weeks (including recovery)</li>
+                                <li><strong>Dental implants:</strong> 7–10 days</li>
+                                <li><strong>Cancer treatment: </strong> May require a phased or longer stay, depending
+                                    on therapy</li>
+                            </ul>
+                            Your doctor will advise the exact duration after the initial consultation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+                            Is post-treatment follow-up available after I return home?
+                        </button>
+                    </h2>
+                    <div id="collapse-10" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Yes, we offer remote follow-ups with your doctor through the WellnessNine app to ensure
+                            continuous care after your return.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11" aria-expanded="false" aria-controls="collapse-11">
+                            What documents do I need to travel for medical treatment?
+                        </button>
+                    </h2>
+                    <div id="collapse-11" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            You'll need:
+                            <ul>
+                                <li>A valid passport</li>
+                                <li>Medical Visa (we assist with the process)</li>
+                                <li>Medical records</li>
+                                <li>Doctor’s prescriptions and consultation notes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item my-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-12" aria-expanded="false" aria-controls="collapse-12">
+                            Can I bring a companion with me?
+                        </button>
+                    </h2>
+                    <div id="collapse-12" class="accordion-collapse collapse" data-bs-parent="#faqAccordian">
+                        <div class="accordion-body">
+                            Yes, companions are welcome, and we also assist with their travel and stay arrangements.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <h3 class="text-center">What’s New</h3>
+        <div class="blog-slider">
+            <div class="blog-card">
+                <div class="bm-card" style="background-image: url(./assets/images/blog-1.jpg);">
+                    <div class="blog-text">
+                        <span class="fs-sm text-white">Latest Update</span>
+                        <h3 class="fw-bold fs-5 text-white">Apollo & University of Leicester launch Digital Health
+                            Centre in India</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="bm-card" style="background-image: url(./assets/images/blog-2.webp);">
+                    <div class="blog-text">
+                        <span class="fs-sm text-white">Latest Update</span>
+                        <h3 class="fw-bold fs-5 text-white">Apollo & University of Leicester launch Digital Health
+                            Centre in India</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="bm-card" style="background-image: url(./assets/images/blog-3.jpg);">
+                    <div class="blog-text">
+                        <span class="fs-sm text-white">Latest Update</span>
+                        <h3 class="fw-bold fs-5 text-white">Apollo & University of Leicester launch Digital Health
+                            Centre in India</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="bm-card" style="background-image: url(./assets/images/blog-4.jpg);">
+                    <div class="blog-text">
+                        <span class="fs-sm text-white">Latest Update</span>
+                        <h3 class="fw-bold fs-5 text-white">Apollo & University of Leicester launch Digital Health
+                            Centre in India</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="bm-card" style="background-image: url(./assets/images/blog-5.jpg);">
+                    <div class="blog-text">
+                        <span class="fs-sm text-white">Latest Update</span>
+                        <h3 class="fw-bold fs-5 text-white">Apollo & University of Leicester launch Digital Health
+                            Centre in India</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-banner">
+        <div class="container">
+            <h3 class="text-center fw-bold fs-1">Start Your Healing Journey Today</h3>
+            <p class="text-center fs-4">Speak to our team or get your personalized quote.</p>
+            <div class="d-flex justify-content-center gap-2">
+                <button class="btn btn-golden btn-lg rounded-pill">Get a Quote</button>
+                <button class="btn btn-white-outlined btn-lg rounded-pill">Book a Appointment</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Navigation</p>
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/treatments">Treatments</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Contact</p>
+                    <ul>
+                        <li><a href="mailto:Support@wellnessnine.com">Support@wellnessnine.com</a></li>
+                        <li><a href="#">WhatsApp Chat</a></li>
+                        <li><a href="tel:+919023519739">Mobile: +91 90235 19739</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Legal</p>
+                    <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of service</a></li>
+                        <li><a href="/hipaa-compliance">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-links">
+                    <p class="fw-bold">Countries</p>
+                    <ul>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" class="text-white text-decoration-none">Terms & Supports</a>
+                    </div>
+                    <div class="col text-end">
+                        <a href="#" class="text-white text-decoration-none">Designed by RCSL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- page title banner end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
