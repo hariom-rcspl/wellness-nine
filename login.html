@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Nine | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-left text-center">
+            <h1 class="text-center">WELLNESS NINE</h1>
+            <p class="text-center">Foundation of Good Health</p>
+        </div>
+
+        <div class="login-right">
+            <div class="form-box">
+                <h3 class="fw-bold mb-3">Welcome Back</h3>
+                <p class="text-muted mb-4" style="font-size: 14px;">Please log in to continue</p>
+    
+                <form action="">
+                    <div class="mb-3">
+                        <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email">
+                    </div>
+    
+                    <div class="mb-3 position-relative">
+                        <input type="password" name="password" class="form-control" placeholder="Password" id="passwordInput">
+                        <span class="position-absolute top-50 end-0 translate-middle-y me-3" onclick="togglePassword()"
+                            style="cursor: pointer;">
+                            <i class="bi bi-eye-slash" id="toggleIcon"></i>
+                        </span>
+                    </div>
+    
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label text-muted" for="rememberMe">
+                            Remember Me?
+                        </label>
+                    </div>
+    
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-golden btn-md hover-golden">Log In</button>
+                    </div>
+                </form>
+    
+                <div class="text-center">
+                    <small class="text-muted">Don't have an account? <a href="/register.html" class="fw-bold">Register Here</a></small>
+                    <p><a class="fw-bold" href="/forgot-password.html">Forgot your password?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("passwordInput");
+            const toggleIcon = document.getElementById("toggleIcon");
+            const isPassword = passwordInput.type === "password";
+
+            passwordInput.type = isPassword ? "text" : "password";
+            toggleIcon.classList.toggle("bi-eye");
+            toggleIcon.classList.toggle("bi-eye-slash");
+        }
+    </script>
+
+
+</body>
+
+</html>

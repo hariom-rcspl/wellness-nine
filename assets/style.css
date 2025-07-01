@@ -2,15 +2,18 @@ img {
     max-width: 100%;
 }
 
-.navbar-brand .main-logo {
-    height: 100px;
-}
-
 .page-banner {
     background-color: #F3E5A4;
-    padding: 100px 0;
+    padding: 200px 0 100px;
 }
 
+.navbar-toggler {
+    background: #FFFBEA;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
 
 .doctor-card {
     border-radius: 10px;
@@ -106,7 +109,7 @@ footer {
 }
 
 .footer-links {
-    padding-top: 40px;
+    /* padding-top: 40px; */
     padding-left: 20px;
 }
 
@@ -154,7 +157,12 @@ footer {
     color: white;
 }
 
-.btn-golden:hover {
+.hover-golden:hover {
+    background-color: #CA9B2B;
+    color: white;
+}
+
+.hover-white:hover {
     color: #CA9B2B;
     background-color: white;
 }
@@ -164,11 +172,15 @@ footer {
     color: white;
 }
 
-.btn-white-outlined:hover {
+/* .btn-white-outlined:hover {
     background-color: #CA9B2B;
     color: white;
-}
+} */
 
+.specialty-item img {
+    display: block;
+    margin: auto;
+}
 
 .blog-card {
     padding: 20px;
@@ -199,7 +211,24 @@ footer {
 .blog-card .blog-text {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.blog-card .blog-text{
+    margin-bottom: -50px;
+    transition: all .3s linear;
+}
+
+.blog-card:hover .blog-text{
+    margin-bottom: 0;
+}
+
+.blog-text h3{
+    
+}
+
 
 
 .faq-sec {
@@ -256,7 +285,7 @@ footer {
 
 .testimonial {
     padding: 100px 0;
-    background: linear-gradient(180deg,rgba(247, 247, 247, 1) 0%, rgba(255, 251, 234, 1) 100%);
+    background: linear-gradient(180deg, rgba(247, 247, 247, 1) 0%, rgba(255, 251, 234, 1) 100%);
 }
 
 
@@ -299,11 +328,101 @@ footer {
 }
 
 .testimonial-top .slick-track {
-  display: flex !important;
-  flex-direction: row-reverse;
+    display: flex !important;
+    flex-direction: row-reverse;
 }
 
-.location-container{
+.location-container {
     padding: 100px 0;
     background-color: #FFFBEA;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/* login page  */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.login-left {
+    background: #CA9B2B;
+    color: white;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-left h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-right {
+    background: white;
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.login-right .form-box {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+}
+
+.phone-field select {
+    width: 160px !important;
+    flex-grow: 0 !important;
+}
+
+.iti {
+    width: 100%;
+}
+
+/* hospital page  */
+
+.hospital-card {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid transparent;
+}
+
+.hospital-card:hover {
+    border: 2px solid #CA9B2B;
+}
+
+.hospital-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }

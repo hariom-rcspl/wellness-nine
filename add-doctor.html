@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .preview-img {
+      height: 100px;
+      margin: 5px;
+      position: relative;
+    }
+    .preview-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .preview-img img {
+      height: 100%;
+      border-radius: 5px;
+    }
+    .remove-img {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container py-4">
+  <h2 class="mb-4">Doctor Registration Form</h2>
+  <form id="doctorForm">
+    <div class="row g-3">
+
+      <div class="col-md-6"><input type="text" class="form-control" placeholder="Name" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+      <div class="col-md-6"><input type="password" class="form-control" placeholder="Password" required></div>
+      <div class="col-md-6"><input type="tel" class="form-control" placeholder="Phone" required></div>
+
+      <div class="col-md-6">
+        <select class="form-select" required>
+          <option selected disabled>Select Country</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+          <!-- add more countries -->
+        </select>
+      </div>
+
+      <div class="col-md-6"><input type="text" class="form-control" placeholder="Expertise" required></div>
+      <div class="col-md-6"><input type="text" class="form-control" placeholder="Highest Degree" required></div>
+      <div class="col-md-6"><input type="text" class="form-control" placeholder="Experience (e.g. 5 years)" required></div>
+      <div class="col-md-6"><input type="number" class="form-control" placeholder="Fee Per Appointment (₹)" required></div>
+
+      <!-- Aadhaar Card -->
+      <div class="col-md-12">
+        <label class="form-label">Aadhaar Card (Front & Back)</label>
+        <input type="file" class="form-control" id="aadhaar" accept="image/*" multiple>
+        <div class="preview-container mt-2" id="aadhaarPreview"></div>
+      </div>
+
+      <!-- PAN Card -->
+      <div class="col-md-12">
+        <label class="form-label">PAN Card</label>
+        <input type="file" class="form-control" id="pan" accept="image/*" multiple>
+        <div class="preview-container mt-2" id="panPreview"></div>
+      </div>
+
+      <!-- MBBS Degree Certificate -->
+      <div class="col-md-12">
+        <label class="form-label">MBBS Degree Certificate</label>
+        <input type="file" class="form-control" id="mbbs" accept="image/*">
+        <div class="preview-container mt-2" id="mbbsPreview"></div>
+      </div>
+
+      <!-- Professional Photo -->
+      <div class="col-md-12">
+        <label class="form-label">Professional Photo</label>
+        <input type="file" class="form-control" id="photo" accept="image/*">
+        <div class="preview-container mt-2" id="photoPreview"></div>
+      </div>
+
+      <!-- Experience Certificates -->
+      <div class="col-md-12">
+        <label class="form-label">Experience Certificates / Letters of Recommendation</label>
+        <input type="file" class="form-control" multiple>
+      </div>
+
+      <!-- Passbook Photo -->
+      <div class="col-md-12">
+        <label class="form-label">Passbook Photo</label>
+        <input type="file" class="form-control" id="passbook" accept="image/*">
+        <div class="preview-container mt-2" id="passbookPreview"></div>
+      </div>
+
+      <!-- Cancelled Cheque -->
+      <div class="col-md-12">
+        <label class="form-label">Cancelled Cheque</label>
+        <input type="file" class="form-control" id="cheque" accept="image/*">
+        <div class="preview-container mt-2" id="chequePreview"></div>
+      </div>
+
+      <!-- Post Graduate Degrees -->
+      <div class="col-md-12">
+        <label class="form-label">Post Graduate Degrees & Certificates</label>
+        <input type="file" class="form-control" id="pg" accept="image/*" multiple>
+        <div class="preview-container mt-2" id="pgPreview"></div>
+      </div>
+
+      <!-- Medical Council Registration Certificate -->
+      <div class="col-md-12">
+        <label class="form-label">Medical Council Registration Certificate</label>
+        <input type="file" class="form-control" id="medical" accept="image/*">
+        <div class="preview-container mt-2" id="medicalPreview"></div>
+      </div>
+
+      <!-- CV/Resume -->
+      <div class="col-md-12">
+        <label class="form-label">CV/Resume</label>
+        <input type="file" class="form-control" id="cv" accept="image/*">
+        <div class="preview-container mt-2" id="cvPreview"></div>
+      </div>
+
+      <div class="col-12 text-end mt-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  function setupImagePreview(inputId, previewId) {
+    const input = document.getElementById(inputId);
+    const preview = document.getElementById(previewId);
+
+    input.addEventListener('change', () => {
+      preview.innerHTML = "";
+      Array.from(input.files).forEach((file, index) => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const div = document.createElement('div');
+          div.classList.add('preview-img');
+          div.innerHTML = `
+            <img src="${e.target.result}" alt="Preview">
+            <button class="remove-img" data-index="${index}">&times;</button>
+          `;
+          preview.appendChild(div);
+
+          div.querySelector('.remove-img').onclick = () => {
+            const dt = new DataTransfer();
+            Array.from(input.files).forEach((f, i) => {
+              if (i !== index) dt.items.add(f);
+            });
+            input.files = dt.files;
+            div.remove();
+            setupImagePreview(inputId, previewId); // Re-setup to correct indexes
+          };
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+  }
+
+  // Setup image preview for each file input
+  setupImagePreview('aadhaar', 'aadhaarPreview');
+  setupImagePreview('pan', 'panPreview');
+  setupImagePreview('mbbs', 'mbbsPreview');
+  setupImagePreview('photo', 'photoPreview');
+  setupImagePreview('passbook', 'passbookPreview');
+  setupImagePreview('cheque', 'chequePreview');
+  setupImagePreview('pg', 'pgPreview');
+  setupImagePreview('medical', 'medicalPreview');
+  setupImagePreview('cv', 'cvPreview');
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Nine | Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-left text-center">
+            <!-- <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" width="100" alt="Logo"> -->
+            <h1 class="text-center">WELLNESS NINE</h1>
+            <p class="text-center">Foundation of Good Health</p>
+        </div>
+
+        <div class="login-right">
+            <div class="form-box">
+                <h3 class="fw-bold mb-3">Create an Account</h3>
+                <p class="text-muted mb-4" style="font-size: 14px;">Join us and get started today!</p>
+
+                <form action="">
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <input id="phone" type="tel" class="form-control">
+                    </div>
+
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-golden btn-md hover-golden">Register</button>
+                    </div>
+                </form>
+
+                <div class="text-center">
+                    <small class="text-muted">Already have an account? <a href="/login.html" class="fw-bold">Login
+                            Here</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "in",
+            loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+        });
+    </script>
+</body>
+
+</html>

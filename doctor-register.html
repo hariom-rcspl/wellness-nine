@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Doctor | Wellness Nine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/logo.png" alt="" height="70" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/hospitals.html">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Blogs</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-golden hover-white" data-bs-toggle="modal"
+                        data-bs-target="#quoteModal">
+                        Get a Quote
+                    </button>
+                    <a href="/login.html" class="btn btn-golden hover-white">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="page-banner">
+        <div class="container">
+            <h1>Get Listed</h1>
+            <p>Avail the opportunity to connect with patients worldwide</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="./assets/images/doc-register.jpg" class="rounded" alt="">
+            </div>
+            <div class="col-lg-6">
+                <form onsubmit="handleSubmit()">
+                    <div>
+                        <div class="text-white bg-dark px-3 py-2 rounded">
+                            <h4>Get Listed as a Doctor</h4>
+                        </div>
+                        <div class="mt-3">
+                            <div class="row spacing-3">
+                                <div class="col-lg-6 mb-3">
+                                    <label for="fname" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="fname" aria-describedby="First name">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="lname" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" aria-describedby="Last name">
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="email">
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input id="phone" type="tel" class="form-control">
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <button type="submit" class="btn btn-golden btn-md hover-golden">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container py-4">
+            <div class="row align-items-start">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="img-fluid" style="max-width: 140px;">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4 footer-links text-start">
+                    <p class="fw-bold">Navigation</p>
+                    <ul class="list-unstyled">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/treatments">Treatments</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 footer-links text-start">
+                    <p class="fw-bold">Contact</p>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:Support@wellnessnine.com">Support@wellnessnine.com</a></li>
+                        <li><a href="#">WhatsApp Chat</a></li>
+                        <li><a href="tel:+919023519739">Mobile: +91 90235 19739</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4 footer-links text-start">
+                    <p class="fw-bold">Legal</p>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of service</a></li>
+                        <li><a href="/hipaa-compliance">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-1 col-md-6 col-sm-6 mb-4 footer-links text-start">
+                    <p class="fw-bold">Countries</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-dark">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" class="text-white text-decoration-none">Terms & Supports</a>
+                    </div>
+                    <div class="col text-end">
+                        <a href="#" class="text-white text-decoration-none">Designed by RCSL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- header modals -->
+
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title mx-auto text-teal fw-bold">Welcome to Medical Tourism</h4>
+                    <button type="button" class="btn-close position-absolute end-0 me-3 mt-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fw-semibold">What medical specialty are you searching for?</p>
+                    <select class="form-select mb-3">
+                        <option>Select medical treatments</option>
+                        <option value="Knee Replacements">Knee Replacements</option>
+                        <option value="Cancer Care">Cancer Care</option>
+                        <option value="Heart Procedures">Heart Procedures</option>
+                        <option value="Dental Work">Dental Work</option>
+                    </select>
+                    <p class="fw-semibold mb-1">Reports
+                        <span class="text-muted">(You can upload a maximum of 2 files - JPEG and PDF)</span>
+                    </p>
+                    <input type="file" class="form-control mb-3" multiple accept=".jpg,.jpeg,.pdf">
+                    <button class="btn btn-golden btn-lg hover-golden ">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title mx-auto text-teal fw-bold">Book Your Appointment</h4>
+                    <button type="button" class="btn-close position-absolute end-0 me-3 mt-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Step 1: Personal Info -->
+                    <div class="step active" id="step-1">
+                        <p class="fw-semibold text-center">Please enter your personal details</p>
+                        <input type="text" class="form-control mb-3" placeholder="Full Name" id="fullName">
+                        <input type="email" class="form-control mb-3" placeholder="Email" id="email">
+                        <input type="tel" class="form-control mb-3" placeholder="Mobile Number" id="mobile">
+                        <button class="btn btn-golden btn-md hover-golden w-100" onclick="nextStep()">Next</button>
+                    </div>
+
+                    <!-- Step 2: Treatment -->
+                    <div class="step" id="step-2">
+                        <h5 class="text-center fw-bold text-info">Select Treatment</h5>
+                        <select class="form-control mt-3" id="treatment">
+                            <option value="">Select Treatment</option>
+                            <option value="Cancer">Cancer</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Orthopedic">Orthopedic</option>
+                        </select>
+                        <div class="d-flex justify-content-between mt-4">
+                            <button class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                            <button class="btn btn-golden btn-md hover-golden" onclick="nextStep()">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Location -->
+                    <div class="step" id="step-3">
+                        <h5 class="text-center fw-bold text-info">Your Location Details</h5>
+                        <select class="form-control mt-3" id="country">
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="Albania">Albania</option>
+                        </select>
+                        <input type="text" class="form-control mt-3" id="city" placeholder="Enter City">
+                        <div class="d-flex justify-content-between mt-4">
+                            <button class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                            <button class="btn btn-golden btn-md hover-golden" onclick="nextStep()">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review -->
+                    <div class="step" id="step-4">
+                        <h5 class="text-center fw-bold text-info">Review Your Appointment</h5>
+                        <div class="mt-3">
+                            <p><strong>Full Name:</strong> <span id="review-name"></span></p>
+                            <p><strong>Email:</strong> <span id="review-email"></span></p>
+                            <p><strong>Mobile:</strong> <span id="review-mobile"></span></p>
+                            <p><strong>Treatment:</strong> <span id="review-treatment"></span></p>
+                            <p><strong>Country:</strong> <span id="review-country"></span></p>
+                            <p><strong>City:</strong> <span id="review-city"></span></p>
+                            <p><strong>Fees:</strong> $100</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <button class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                            <button class="btn btn-success" onclick="confirmBooking()">Confirm Booking</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Success -->
+                    <div class="step text-center" id="step-5">
+                        <h5 class="fw-bold">Your appointment has been booked successfully!</h5>
+                        <p class="mt-2">Details have been sent to your email and hospital.</p>
+                        <button class="btn btn-outline-secondary mt-3" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "in",
+            loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+        });
+
+        function handleSubmit() {
+            e.preventDefault(); // Prevent form from submitting
+
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            console.log("First Name:", fname);
+            console.log("Last Name:", lname);
+            console.log("Email:", email);
+            console.log("Phone:", phone);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - User Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="/dashboard/" class="sidebar-brand">
+                <i class="fas fa-tachometer-alt me-2"></i>
+                Dashboard
+            </a>
+        </div>
+        <ul class="sidebar-nav list-unstyled">
+            <li class="nav-item">
+                <a href="/dashboard/" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="appointments.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    Appointments
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="quotations.html" class="nav-link">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    Quotation Requests
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="profile.html" class="nav-link active">
+                    <i class="fas fa-user-cog"></i>
+                    Profile Settings
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Bar -->
+        <div class="topbar">
+            <div class="d-flex align-items-center">
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h4 class="mb-0 ms-2">Profile Settings</h4>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user-circle fa-lg"></i>
+                        <span class="ms-2">John Doe</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Profile</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="profile-card text-center">
+                        <img src="../assets/images/no-image.webp" alt="Profile Picture"
+                            class="profile-avatar mb-3">
+                        <h5>John Doe</h5>
+                        <p class="text-muted">Web Developer & Designer</p>
+                        <p class="text-muted small">Member since: January 2023</p>
+                        <button class="btn btn-outline-primary btn-sm mb-2">
+                            <i class="fas fa-camera me-2"></i>Change Photo
+                        </button>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small">Profile Completion</span>
+                                <span class="small">85%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="profile-card mt-3">
+                        <h6 class="mb-3">Quick Stats</h6>
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="stats-number text-primary">24</div>
+                                <div class="small text-muted">Appointments</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stats-number text-success">12</div>
+                                <div class="small text-muted">Quotations</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stats-number text-info">98%</div>
+                                <div class="small text-muted">Rating</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <!-- Profile Information -->
+                    <div class="profile-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="mb-0">Personal Information</h6>
+                            <button class="btn btn-sm btn-outline-primary" id="editProfileBtn">
+                                <i class="fas fa-edit me-1"></i>Edit
+                            </button>
+                        </div>
+                        <form id="profileForm">
+                            <div class="row mb-3">
+                                <div>
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" value="John" readonly>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" value="john.doe@example.com"
+                                        readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567"
+                                        readonly>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="hospital" class="form-label">Hospital</label>
+                                    <input type="text" class="form-control" id="hospital" value="Freelance Designer"
+                                        readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="website" class="form-label">Website</label>
+                                    <input type="url" class="form-control" id="website" value="https://johndoe.com"
+                                        readonly>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address"
+                                    value="123 Main Street, New York, NY 10001" readonly>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="bio" class="form-label">Bio</label>
+                                <textarea class="form-control" id="bio" rows="3"
+                                    readonly>Experienced web developer and designer with over 5 years in the industry. Specializing in modern web technologies and user experience design.</textarea>
+                            </div>
+
+                            <div class="d-none" id="profileActions">
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save me-2"></i>Save Changes
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" id="cancelEditBtn">
+                                        <i class="fas fa-times me-2"></i>Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Business Settings -->
+                    <div class="profile-card mt-4">
+                        <h6 class="mb-3">Business Settings</h6>
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="timezone" class="form-label">Timezone</label>
+                                    <select class="form-select" id="timezone">
+                                        <option value="EST">Eastern Standard Time (EST)</option>
+                                        <option value="CST">Central Standard Time (CST)</option>
+                                        <option value="MST">Mountain Standard Time (MST)</option>
+                                        <option value="PST">Pacific Standard Time (PST)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="currency" class="form-label">Currency</label>
+                                    <select class="form-select" id="currency">
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - British Pound</option>
+                                        <option value="CAD">CAD - Canadian Dollar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="workingHours" class="form-label">Working Hours</label>
+                                    <select class="form-select" id="workingHours">
+                                        <option value="9-5">9:00 AM - 5:00 PM</option>
+                                        <option value="8-4">8:00 AM - 4:00 PM</option>
+                                        <option value="10-6">10:00 AM - 6:00 PM</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="workingDays" class="form-label">Working Days</label>
+                                    <select class="form-select" id="workingDays">
+                                        <option value="mon-fri">Monday - Friday</option>
+                                        <option value="mon-sat">Monday - Saturday</option>
+                                        <option value="all-week">All Week</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Update Business Settings
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Security Settings -->
+                    <div class="profile-card mt-4">
+                        <h6 class="mb-3">Security Settings</h6>
+                        <form>
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label">Current Password</label>
+                                <input type="password" class="form-control" id="currentPassword">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="newPassword">
+                                <div class="form-text">Password must be at least 8 characters long</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="confirmPassword">
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="twoFactor">
+                                    <label class="form-check-label" for="twoFactor">
+                                        Enable Two-Factor Authentication
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-key me-2"></i>Update Password
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div class="profile-card mt-4">
+                        <h6 class="mb-3">Notification Preferences</h6>
+                        <form>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                    <label class="form-check-label" for="emailNotifications">
+                                        Email Notifications
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="appointmentReminders" checked>
+                                    <label class="form-check-label" for="appointmentReminders">
+                                        Appointment Reminders
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="quotationUpdates" checked>
+                                    <label class="form-check-label" for="quotationUpdates">
+                                        Quotation Status Updates
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="marketingEmails">
+                                    <label class="form-check-label" for="marketingEmails">
+                                        Marketing Emails
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-bell me-2"></i>Update Notifications
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Profile editing functionality
+        const editProfileBtn = document.getElementById('editProfileBtn');
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        const profileActions = document.getElementById('profileActions');
+        const profileForm = document.getElementById('profileForm');
+        const formInputs = profileForm.querySelectorAll('input, textarea');
+
+        editProfileBtn.addEventListener('click', function () {
+            formInputs.forEach(input => {
+                if (input.id !== 'email') { // Keep email readonly
+                    input.removeAttribute('readonly');
+                }
+            });
+            editProfileBtn.classList.add('d-none');
+            profileActions.classList.remove('d-none');
+        });
+
+        cancelEditBtn.addEventListener('click', function () {
+            formInputs.forEach(input => {
+                input.setAttribute('readonly', true);
+            });
+            editProfileBtn.classList.remove('d-none');
+            profileActions.classList.add('d-none');
+            // Reset form values here if needed
+        });
+
+        profileForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Add save functionality here
+            alert('Profile updated successfully!');
+            formInputs.forEach(input => {
+                input.setAttribute('readonly', true);
+            });
+            editProfileBtn.classList.remove('d-none');
+            profileActions.classList.add('d-none');
+        });
+    </script>
+</body>
+
+</html>
