@@ -86,7 +86,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.testimonial-top').slick({
         infinite: true,
-        speed: 3000,
+        speed: 20000,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
@@ -103,7 +103,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.testimonial-bottom').slick({
         infinite: true,
-        speed: 3000,
+        speed: 20000,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
