@@ -500,8 +500,7 @@
                         <div id="details" class="details">
                             <h2>India</h2>
                             <p><strong>City:</strong> New Delhi</p>
-                            <p><strong>Address:</strong> India is a diverse country in South Asia known for its rich
-                                cultural heritage, vibrant traditions, and rapid economic growth.</p>
+                            <p><strong>Address:</strong>NH-01, Amrapali Platinum, Sector 119, Noida, Uttar Pradesh 201305</p>
                         </div>
                     </div>
                 </div>
@@ -690,23 +689,31 @@
             India: {
                 name: "India",
                 city: "New Delhi",
-                address: "India is a diverse country in South Asia known for its rich cultural heritage, vibrant traditions, and rapid economic growth."
+                address: "NH-01, Amrapali Platinum, Sector 119, Noida, Uttar Pradesh 201305"
             },
             "United States": {
                 name: "United States",
                 city: "Washington, D.C.",
-                address: "The USA is a global superpower with a diverse landscape, leading technology sector, and a melting pot of cultures."
+                address: "2451 University Hospital Dr, Mobile, AL 36617, United States"
             },
             Canada: {
                 name: "Canada",
                 city: "Ottawa",
-                address: "Canada is known for its stunning natural beauty, multicultural cities, and high quality of life."
+                address: "1001 Decarie Blvd, Montreal, Quebec H4A 0B1, Canada"
             }
         };
 
         // Initialize map to show the world
-        let map = L.map('map').setView([20, 0], 1);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        let map = L.map('map', {
+            center: [20, 0],        // Center of the world
+            zoom: 2,                // Reasonable zoom to see all continents
+            scrollWheelZoom: false // Disable scroll zoom
+        });
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
 
         const highlightStyle = {
             weight: 2,
