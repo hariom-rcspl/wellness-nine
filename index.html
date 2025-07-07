@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -18,8 +18,8 @@
 
     <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="/assets/images/logo.png" alt="" height="70" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="./">
+                <img src="./assets/images/logo.png" alt="" height="70" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -52,7 +52,7 @@
     <div class="main-container">
         <div class="bg-video">
             <video class="local-video" autoplay loop muted playsinline>
-                <source src="./assets/bg.mp4" type="video/mp4">
+                <source src="./assets/Wellnessnine.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -71,10 +71,10 @@
                             data-bs-toggle="modal" data-bs-target="#quoteModal">
                             Get a Quote
                         </button>
-                        <button type="button" class="btn btn-white-outlined btn-lg rounded-pill hover-white"
+                        <!-- <button type="button" class="btn btn-white-outlined btn-lg rounded-pill hover-white"
                             data-bs-toggle="modal" data-bs-target="#appointmentModal">
                             Book an Appointment
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
@@ -486,23 +486,24 @@
         </div>
     </div>
 
-    
+
     <div class="location-container">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <!-- <div id="map" style="height: 500px;"></div> -->
-                     <img src="./assets/images/map.jpg" alt="" style="height: 100%; width: auto; object-fit: contain; background-color: white;">
+                    <div id="map-container">
+                        <div id="map"></div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3>Our Locations</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellat repudiandae ex ratione doloribus voluptates quisquam? Odit sapiente beatae quisquam dolor laboriosam, consequuntur cumque aut illum, unde fuga et veritatis!</p>
-                    <h4>India</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellat repudiandae ex ratione doloribus voluptates quisquam? Odit sapiente beatae quisquam dolor laboriosam, consequuntur cumque aut illum, unde fuga et veritatis!</p>
-                    <h4>USA</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellat repudiandae ex ratione doloribus voluptates quisquam? Odit sapiente beatae quisquam dolor laboriosam, consequuntur cumque aut illum, unde fuga et veritatis!</p>
-                    <h4>Canada</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellat repudiandae ex ratione doloribus voluptates quisquam? Odit sapiente beatae quisquam dolor laboriosam, consequuntur cumque aut illum, unde fuga et veritatis!</p>
+                    <div id="details-container">
+                        <div id="details" class="details">
+                            <h2>India</h2>
+                            <p><strong>City:</strong> New Delhi</p>
+                            <p><strong>Address:</strong> India is a diverse country in South Asia known for its rich
+                                cultural heritage, vibrant traditions, and rapid economic growth.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -627,9 +628,9 @@
                 <div class="col-lg-2 col-md-4 col-sm-6 mb-4 footer-links text-start">
                     <p class="fw-bold">Navigation</p>
                     <ul class="list-unstyled">
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/how-it-works">How it works</a></li>
-                        <li><a href="/treatments">Treatments</a></li>
+                        <li><a href="./about">About</a></li>
+                        <li><a href="./how-it-works">How it works</a></li>
+                        <li><a href="./treatments">Treatments</a></li>
                     </ul>
                 </div>
 
@@ -645,9 +646,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4 footer-links text-start">
                     <p class="fw-bold">Legal</p>
                     <ul class="list-unstyled">
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service">Terms of service</a></li>
-                        <li><a href="/hipaa-compliance">HIPAA Compliance</a></li>
+                        <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        <li><a href="./terms-of-service">Terms of service</a></li>
+                        <li><a href="./hipaa-compliance">HIPAA Compliance</a></li>
                     </ul>
                 </div>
 
@@ -681,30 +682,77 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="./assets/script.js"></script>
 
     <script>
-        var map = L.map('map', {
-            zoomControl: false,     // Disable + / - buttons
-            scrollWheelZoom: false, // Disable scroll wheel zoom
-            doubleClickZoom: false, // Disable double-click zoom
-            // dragging: false,        // Disable dragging (optional)
-            touchZoom: false        // Disable pinch zoom on touch devices
-        }).setView([22.9734, 78.6569], 4);
+        const countryData = {
+            India: {
+                name: "India",
+                city: "New Delhi",
+                address: "India is a diverse country in South Asia known for its rich cultural heritage, vibrant traditions, and rapid economic growth."
+            },
+            "United States": {
+                name: "United States",
+                city: "Washington, D.C.",
+                address: "The USA is a global superpower with a diverse landscape, leading technology sector, and a melting pot of cultures."
+            },
+            Canada: {
+                name: "Canada",
+                city: "Ottawa",
+                address: "Canada is known for its stunning natural beauty, multicultural cities, and high quality of life."
+            }
+        };
 
-        L?.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        // Initialize map to show the world
+        let map = L.map('map').setView([20, 0], 1);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-        var locations = [
-            { name: "Ahmedabad", coords: [23.0225, 72.5714], doctors: "20+", hospitals: "5+" },
-            { name: "Mumbai", coords: [19.0760, 72.8777], doctors: "25+", hospitals: "15+" },
-            { name: "Bengaluru", coords: [12.9716, 77.5946], doctors: "30+", hospitals: "25+" }
-        ];
+        const highlightStyle = {
+            weight: 2,
+            color: '#1d4ed8',
+            fillOpacity: 0.2,
+            fillColor: '#3b82f6'
+        };
 
-        locations.forEach(loc => {
-            L.marker(loc.coords).addTo(map)
-                .bindPopup(`<b>${loc.name}</b><br>${loc.doctors} doctors<br>${loc.hospitals} hospitals`);
-        });
+        const defaultStyle = {
+            weight: 1,
+            color: '#000',
+            fillOpacity: 0.1,
+            fillColor: '#000'
+        };
+
+        let countryLayers = {};
+
+        function updateDetails(countryName) {
+            const data = countryData[countryName] || countryData.India;
+            const detailsDiv = document.getElementById('details');
+            detailsDiv.innerHTML = `
+        <h2>${data.name}</h2>
+        <p><strong>City:</strong> ${data.city}</p>
+        <p><strong>Address:</strong> ${data.address}</p>
+      `;
+        }
+
+        fetch('https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    filter: feature => ['India', 'United States', 'Canada'].includes(feature.properties.name),
+                    style: feature => feature.properties.name === 'India' ? highlightStyle : defaultStyle,
+                    onEachFeature: (feature, layer) => {
+                        const countryName = feature.properties.name;
+                        countryLayers[countryName] = layer;
+                        layer.on('click', () => {
+                            // Only update highlight and details, do not zoom
+                            Object.keys(countryLayers).forEach(name => {
+                                countryLayers[name].setStyle(name === countryName ? highlightStyle : defaultStyle);
+                            });
+                            updateDetails(countryName);
+                        });
+                    }
+                }).addTo(map);
+            });
     </script>
 </body>
 
