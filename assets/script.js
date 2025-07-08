@@ -118,6 +118,29 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $('.logo-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 2000,
+        gap: 20,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 2 }
+            }
+        ]
+    });
+});
+
+$(document).ready(function () {
     $('.video-card').on('click', function () {
         const videoUrl = $(this).data('video'); // Get URL from data attribute
         $('#videoFrame').attr('src', videoUrl);
