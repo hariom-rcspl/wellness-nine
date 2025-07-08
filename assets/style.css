@@ -179,7 +179,15 @@ footer {
 
 .specialty-item img {
     display: block;
-    margin: auto;
+    border: 2px solid #f04c24;
+    border-radius: 100%;
+    transition: all .2s linear;
+    margin: 20px auto;
+}
+
+
+.specialty-item:hover img{
+    transform: scale(1.1);
 }
 
 .blog-card {
