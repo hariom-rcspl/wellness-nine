@@ -179,15 +179,23 @@ footer {
 
 .specialty-item img {
     display: block;
+    transition: all .2s linear;
+}
+
+.specialty-item .si-imgbox {
     border: 2px solid #f04c24;
     border-radius: 100%;
-    transition: all .2s linear;
-    margin: 20px auto;
+    margin: auto;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    display: grid;
+    place-content: center;
 }
 
 
-.specialty-item:hover img{
-    transform: scale(1.1);
+.specialty-item:hover .si-imgbox img {
+    transform: scale(1.3);
 }
 
 .blog-card {
@@ -346,7 +354,7 @@ footer {
     width: 100%;
 }
 
-#details-container{
+#details-container {
     padding: 20px;
 }
 
