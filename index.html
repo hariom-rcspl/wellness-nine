@@ -656,6 +656,42 @@
         </div>
     </div>
 
+    <div class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 p-5">
+                    <div class="map-images">
+                        <div><img src="./assets/images/india.webp" alt=""></div>
+                        <div><img src="./assets/images/usa.jpg" alt=""></div>
+                        <div><img src="./assets/images/canada.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-4">
+                    <div class="map-detail">
+                        <div>
+                            <h3 class="fw-bold">Our Location in India</h3>
+                            <p >We are located in the heart of Noida, Uttar Pradesh, providing easy
+                                access
+                                to world-class medical facilities.</p>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold">Our Location in USA</h3>
+                            <p >We are located in the heart of Washington, D.C., providing easy access
+                                to
+                                world-class medical facilities.</p>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold">Our Location in Canada</h3>
+                            <p >We are located in the heart of Ottawa, Ontario, providing easy access
+                                to
+                                world-class medical facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <div class="container py-4">
@@ -800,6 +836,25 @@
                     }
                 }).addTo(map);
             });
+    </script>
+
+    <script>
+        $('.map-images').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            autoplayspeed: 2000,
+            asNavFor: '.map-detail'
+        });
+        $('.map-detail').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.map-images',
+            arrows: true,
+            autoPlay: true,
+            autoplayspeed: 2000,
+        });
     </script>
 </body>
 

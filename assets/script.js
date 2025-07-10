@@ -110,7 +110,7 @@ $(document).ready(function () {
         variableWidth: true,
         autoplay: true,
         autoplaySpeed: 0,
-        cssEase: 'linear',
+        // cssEase: 'linear',
         pauseOnHover: true,
         arrows: false,
         dots: false,

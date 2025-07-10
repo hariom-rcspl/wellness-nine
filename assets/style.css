@@ -460,3 +460,22 @@ footer {
     object-fit: cover;
     border-radius: 10px;
 }
+
+.map-detail .slick-arrow{
+    position: absolute;
+    bottom: -50px;
+    top: auto;
+}
+
+.map-detail .slick-arrow.slick-prev {
+    left: 10px;
+}
+
+.map-detail .slick-arrow.slick-next {
+    left: 50px;
+}
+
+.slick-prev:before, .slick-next:before{
+    color: white;
+    font-size: 30px;
+}
